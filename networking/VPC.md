@@ -1,10 +1,17 @@
-aws> ec2 describe-vpcs
-aws> ec2 create-vpc --cidr-block 10.0.0.0/16
-aws> ec2 create-tags --resources vpc-f0bff594 --tags Key=Name,Value=sample-vpc
-aws> ec2 describe-vpcs
-aws> ec2 describe-internet-gateways
-aws> ec2 create-internet-gateway 
-aws> ec2 create-tags --resources igw-6992410d --tags Key=Name,Value=sample-vpc-igw
+`aws> ec2 describe-vpcs`
+
+`aws> ec2 create-vpc --cidr-block 10.0.0.0/16`
+
+`aws> ec2 create-tags --resources vpc-f0bff594 --tags Key=Name,Value=sample-vpc`
+
+`aws> ec2 describe-vpcs`
+
+`aws> ec2 describe-internet-gateways`
+
+`aws> ec2 create-internet-gateway `
+
+`aws> ec2 create-tags --resources igw-6992410d --tags Key=Name,Value=sample-vpc-igw`
+
 aws> ec2 attach-internet-gateway --vpc-id vpc-f0bff594 --internet-gateway-id igw-6992410d
 aws> ec2 describe-internet-gateways
 aws> ec2 describe-subnets --query 'Subnets[?VpcId==`vpc-f0bff594`]' 
